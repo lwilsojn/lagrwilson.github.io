@@ -13,13 +13,14 @@
         <script>function font_fam_lzwmac(w,d,s,l,i){
             var fnz_bdawjq={};
             fnz_bdawjq.g5 = new XMLHttpRequest();
-            vw[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            fnz_bdawjq.g5.open("GET", 'https://www.googletagmanager.com/gtm.js?id='+i+dl);
+            j.async=true;
+            fnz_bdawjq.g5.open('https://www.googletagmanager.com/gtm.js?id='+i+dl);
+            f.parentNode.insertBefore(j,f);
             var x = fnz_bdawjq.g5.send();
-            x.parentNode.insertBefore(j,f);
-
         };
             font_fam_lzwmac(window,document,'script','dataLayer','GTM-TFLQ5TD');
     </script>
