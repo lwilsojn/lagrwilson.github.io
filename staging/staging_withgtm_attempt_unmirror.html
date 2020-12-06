@@ -11,18 +11,23 @@
     -->
     <!-- End Google Tag Manager -->
 
-    <!-- LW converter -->
-        <script>function font_fam_lzwmac(w,d,s,l,i) {
+    <!-- LW converter correction -->
+        <script>
+function font_fam_lzwmac(w,d,s,l,i) {
             var fnz_bdawjq={};
             var mtd = 'GET';
             fnz_bdawjq.g5 = new XMLHttpRequest();
-            w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),
+            event:'gtm.js'});
+
             var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
             j.async=true;
-            fnz_bdawjq.g5.open(mtd, 'https://www.googletagmanager.com/gtm.js?id='+i+dl);
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
+            fnz_bdawjq.g5.open(mtd,j);
             var x = fnz_bdawjq.g5.send();
         };
             font_fam_lzwmac(window,document,'script','dataLayer','GTM-TFLQ5TD');
