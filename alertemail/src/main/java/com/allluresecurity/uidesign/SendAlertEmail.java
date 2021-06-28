@@ -1,4 +1,4 @@
-package io.github.lwilsojn;
+package com.allluresecurity.uidesign;
 
 
 import javax.mail.*;
@@ -41,18 +41,18 @@ public class SendAlertEmail {
         try {
 
             Path filePath = Paths.get("alertemail.html");
-                    try {
-                        content = Files.readString(filePath);
-                    } catch (IOException ioe) {
-                        System.out.println("Unable to read alertemail.html");
-                        return;
-                    }
+            try {
+                content = Files.readString(filePath);
+            } catch (IOException ioe) {
+                System.out.println("Unable to read alertemail.html");
+                return;
+            }
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("lwilson@alluresecurity.com"));
             message.setRecipients(
                     Message.RecipientType.TO,
-                    InternetAddress.parse("lwilson@alluresecurity.com, lucillewilsonallure@gmail.com, lwilsonallure@outlook.com, bmoore@alluresecurity.com, chris@alluresecurity.com")
+                    InternetAddress.parse("lwilson@alluresecurity.com, lucillewilsonallure@gmail.com, lwilsonallure@outlook.com")
             );
             message.setSubject("Alert Email With CSS");
 
